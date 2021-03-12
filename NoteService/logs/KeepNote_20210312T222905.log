@@ -1,0 +1,24 @@
+2021-03-12 22:29:07 [main] INFO  c.s.k.t.c.NoteControllerTest -
+				Starting NoteControllerTest on DESKTOP-N84U7ND with PID 14004 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\NoteService)
+2021-03-12 22:29:07 [main] DEBUG c.s.k.t.c.NoteControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 22:29:07 [main] INFO  c.s.k.t.c.NoteControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 22:29:10 [main] INFO  c.s.k.t.c.NoteControllerTest -
+				Started NoteControllerTest in 3.507 seconds (JVM running for 6.021)
+2021-03-12 22:29:12 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Starting LoggerTest on DESKTOP-N84U7ND with PID 14004 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\NoteService)
+2021-03-12 22:29:12 [main] DEBUG c.s.keepnote.test.log.LoggerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 22:29:12 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 22:29:17 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Started LoggerTest in 5.21 seconds (JVM running for 12.728)
+2021-03-12 22:29:17 [main] INFO  c.s.k.t.r.NoteRepositoryTest -
+				Starting NoteRepositoryTest on DESKTOP-N84U7ND with PID 14004 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\NoteService)
+2021-03-12 22:29:17 [main] DEBUG c.s.k.t.r.NoteRepositoryTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 22:29:17 [main] INFO  c.s.k.t.r.NoteRepositoryTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 22:29:18 [main] INFO  c.s.k.t.r.NoteRepositoryTest -
+				Started NoteRepositoryTest in 1.215 seconds (JVM running for 14.091)

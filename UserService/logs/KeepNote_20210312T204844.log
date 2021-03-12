@@ -1,0 +1,1432 @@
+2021-03-12 20:48:45 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:45 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:45 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:46 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:46 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@47311277]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:47 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:47 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@40ac6b76]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:47 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:47 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@51efb731]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:47 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:47 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@64e7d698]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:47 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:47 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:48 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@5fffb692]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:48 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:48 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@5c8d58ed]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:48 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:48 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@7ac5b4c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:48 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:48 [main] ERROR o.s.boot.SpringApplication -
+				Application run failed
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] ERROR o.s.test.context.TestContextManager -
+				Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56f730b2] to prepare test instance [com.stackroute.keepnote.test.controller.UserControllerTest@7f51f588]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:99)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:79)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:54)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class com.stackroute.keepnote.model.User.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 15
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 15.0.1+9-18
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 15.0.1+9-18
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:157)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.createMock(MockitoPostProcessor.java:222)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:192)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:174)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:144)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection: Unsupported class file major version 59
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection$Dispatcher$Initializable$Unavailable.defineClass(ClassInjector.java:409)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingReflection.injectRaw(ClassInjector.java:234)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:110)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$Default$InjectionDispatcher.load(ClassLoadingStrategy.java:232)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:100)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:5686)
+	at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:121)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:152)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:365)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:174)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:376)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:65)
+	at org.mockito.Mockito.mock(Mockito.java:1855)
+	... 42 common frames omitted
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				Starting UserRepositoryTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:48 [main] DEBUG c.s.k.t.r.UserRepositoryTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:48 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:55 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				Started UserRepositoryTest in 6.955 seconds (JVM running for 11.803)
+2021-03-12 20:48:56 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Starting LoggerTest on DESKTOP-N84U7ND with PID 25656 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 20:48:56 [main] DEBUG c.s.keepnote.test.log.LoggerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 20:48:56 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 20:48:59 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Started LoggerTest in 2.771 seconds (JVM running for 15.587)

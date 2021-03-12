@@ -2,11 +2,14 @@ package com.stackroute.keepnote.model;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /*
  * Please note that this class is annotated with @Document annotation
  * @Document identifies a domain object to be persisted to MongoDB.
  *  */
-
+@Document
 public class NoteUser {
 
 	/*
@@ -16,6 +19,7 @@ public class NoteUser {
 	 */
 
     
+	@Id
     private String userId;
     private List<Note> notes;
 
@@ -35,4 +39,5 @@ public class NoteUser {
     public void setNotes(List<Note> notes) {
         this.notes = notes;
     }
+
 }

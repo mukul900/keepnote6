@@ -13,44 +13,46 @@ public class Category {
 	 * always initialized with the system date.
 	 */
 
-    public String getCategoryId() {
-        return null;
-    }
-
-    public void setCategoryId(String categoryId) {
-       
-    }
-
-    public String getCategoryName() {
-        return null;
-    }
-
-    public void setCategoryName(String categoryName) {
-        
-    }
-
-    public String getCategoryDescription() {
-        return null;
-    }
-
-    public void setCategoryDescription(String categoryDescription) {
-      
-    }
-
-    public String getCategoryCreatedBy() {
-        return null;
-    }
-
-    public void setCategoryCreatedBy(String categoryCreatedBy) {
-       
-    }
-
-    public Date getCategoryCreationDate() {
-        return null;
-    }
-
-    public void setCategoryCreationDate(Date categoryCreationDate) {
-      
-    }
+	private String categoryId;
+	private String categoryName;
+	private String CategoryDescription;
+	private String categoryCreatedBy;
+	private Date categoryCreationDate;
+	public String getCategoryId() {
+		return categoryId;
+	}
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+	public String getCategoryDescription() {
+		return CategoryDescription;
+	}
+	public void setCategoryDescription(String categoryDescription) {
+		CategoryDescription = categoryDescription;
+	}
+	public String getCategoryCreatedBy() {
+		return categoryCreatedBy;
+	}
+	public void setCategoryCreatedBy(String categoryCreatedBy) {
+		this.categoryCreatedBy = categoryCreatedBy;
+	}
+	public Date getCategoryCreationDate() {
+		return categoryCreationDate;
+	}
+	public void setCategoryCreationDate(Date categoryCreationDate) {
+		categoryCreationDate = categoryCreationDate;
+	}
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", CategoryDescription="
+				+ CategoryDescription + ", categoryCreatedBy=" + categoryCreatedBy + ", categoryCreationDate=" + categoryCreationDate
+				+ "]";
+	}
 
 }

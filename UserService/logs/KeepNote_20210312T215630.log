@@ -1,0 +1,24 @@
+2021-03-12 21:56:31 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Starting UserControllerTest on DESKTOP-N84U7ND with PID 18644 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 21:56:31 [main] DEBUG c.s.k.t.c.UserControllerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 21:56:31 [main] INFO  c.s.k.t.c.UserControllerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 21:56:33 [main] INFO  c.s.k.t.c.UserControllerTest -
+				Started UserControllerTest in 2.353 seconds (JVM running for 4.313)
+2021-03-12 21:56:34 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				Starting UserRepositoryTest on DESKTOP-N84U7ND with PID 18644 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 21:56:34 [main] DEBUG c.s.k.t.r.UserRepositoryTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 21:56:34 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 21:56:36 [main] INFO  c.s.k.t.r.UserRepositoryTest -
+				Started UserRepositoryTest in 2.028 seconds (JVM running for 7.013)
+2021-03-12 21:56:36 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Starting LoggerTest on DESKTOP-N84U7ND with PID 18644 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-12 21:56:36 [main] DEBUG c.s.keepnote.test.log.LoggerTest -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-12 21:56:36 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				No active profile set, falling back to default profiles: default
+2021-03-12 21:56:38 [main] INFO  c.s.keepnote.test.log.LoggerTest -
+				Started LoggerTest in 2.189 seconds (JVM running for 9.505)
