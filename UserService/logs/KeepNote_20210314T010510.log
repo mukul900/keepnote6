@@ -1,0 +1,18 @@
+2021-03-14 01:05:11 [main] INFO  c.s.keepnote.UserServiceApplication -
+				Starting UserServiceApplication on DESKTOP-N84U7ND with PID 27420 (started by MukulAnand in C:\Users\MukulAnand\Desktop\Domain Training\keepnote-step6-boilerplate\UserService)
+2021-03-14 01:05:11 [main] DEBUG c.s.keepnote.UserServiceApplication -
+				Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2021-03-14 01:05:11 [main] INFO  c.s.keepnote.UserServiceApplication -
+				No active profile set, falling back to default profiles: default
+2021-03-14 01:05:12 [localhost-startStop-1] DEBUG c.s.keepnote.jwtfilter.JwtFilter -
+				Initializing filter 'jwtFilter'
+2021-03-14 01:05:12 [localhost-startStop-1] DEBUG c.s.keepnote.jwtfilter.JwtFilter -
+				Filter 'jwtFilter' configured successfully
+2021-03-14 01:05:14 [main] INFO  c.s.keepnote.UserServiceApplication -
+				Started UserServiceApplication in 3.37 seconds (JVM running for 4.24)
+2021-03-14 01:05:32 [http-nio-8081-exec-3] INFO  c.s.keepnote.aspectj.LoggingAspect -
+				Inside the Before methodregisterUser
+2021-03-14 01:05:33 [http-nio-8081-exec-3] INFO  c.s.keepnote.aspectj.LoggingAspect -
+				Inside the After methodregisterUser
+2021-03-14 01:05:33 [http-nio-8081-exec-3] INFO  c.s.keepnote.aspectj.LoggingAspect -
+				Inside the After returning methodregisterUser

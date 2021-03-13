@@ -27,7 +27,7 @@ public class NoteServiceApplication {
 	@Bean
 	public FilterRegistrationBean jwtFilter() {
 		FilterRegistrationBean<Filter> filter = new FilterRegistrationBean<>();
-		filter.addUrlPatterns("/api/v1/note");
+		filter.addUrlPatterns("");
 		filter.setFilter(new JwtFilter());
 		return filter;
 	}

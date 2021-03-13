@@ -1,7 +1,27 @@
 package com.stackroute.keepnote.controller;
 
 
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.stackroute.keepnote.exception.UserAlreadyExistsException;
+import com.stackroute.keepnote.exception.UserNotFoundException;
+import com.stackroute.keepnote.model.User;
 import com.stackroute.keepnote.service.UserAuthenticationService;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
 /*
  * As in this assignment, we are working on creating RESTful web service, hence annotate
@@ -11,6 +31,8 @@ import com.stackroute.keepnote.service.UserAuthenticationService;
  * format. Starting from Spring 4 and above, we can use @RestController annotation which 
  * is equivalent to using @Controller and @ResposeBody annotation
  */
+@RestController
+@RequestMapping("api/v1/auth")
 public class UserAuthenticationController {
 
     /*
@@ -18,8 +40,10 @@ public class UserAuthenticationController {
 	 * autowiring) Please note that we should not create an object using the new
 	 * keyword
 	 */
-
+	@Autowired
+	UserAuthenticationService userAuthenticationService;
     public UserAuthenticationController(UserAuthenticationService authicationService) {
+    	this.userAuthenticationService=authicationService;
 	}
 
 /*
@@ -32,7 +56,18 @@ public class UserAuthenticationController {
 	 * 
 	 * This handler method should map to the URL "/api/v1/auth/register" using HTTP POST method
 	 */
-
+    @PostMapping("/register")
+   public ResponseEntity<?>  registerUser(@RequestBody User user)
+    {
+    	try {
+    		userAuthenticationService.saveUser(user);
+    		return new ResponseEntity<>("user added",HttpStatus.CREATED);
+    	}
+    	catch(UserAlreadyExistsException u)
+    	{
+    		return new ResponseEntity<>("user already exists",HttpStatus.CONFLICT);
+    	}
+    }
 
 
 
@@ -51,14 +86,57 @@ public class UserAuthenticationController {
 
 
 
+  //  @PostMapping("/login")
+    //public ResponseEntity<?> login(@RequestBody User user)
+    //{
+//    	try {
+//			User u=userAuthenticationService.findByUserIdAndPassword(user.getUserId(), user.getUserPassword());
+//			return new ResponseEntity<>("user login successfull",HttpStatus.OK);
+//    	} catch (UserNotFoundException e) {
+//			return new ResponseEntity<>("user login failed",HttpStatus.UNAUTHORIZED);
+//		}
+//    }
 
-
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody User user){
+		String jwtToken ="";
+		Map<String,String> map = new HashMap<>();
+		try {
+			jwtToken = getToken(user.getUserId(), user.getUserPassword());
+			map.put("token", jwtToken);
+			map.put("message", "user logged in successfully");
+			return new ResponseEntity<>(map,HttpStatus.OK);
+		}catch(Exception e) {
+			map.put("token", "");
+			map.put("message", "user NOT logged in ");
+			return new ResponseEntity<>(map,HttpStatus.UNAUTHORIZED);
+		}
+		
+	}
+	
+    
 
 // Generate JWT token
 	public String getToken(String username, String password) throws Exception {
 			
-        return null;
-        
+		String jwtToken ="";
+		
+		if(username == null || password ==null) {
+			throw new ServletException(" Username - Password cannot be blank");
+		}
+		
+		boolean status = (userAuthenticationService.findByUserIdAndPassword(username, password)!=null);
+		if(!status) {
+			throw new ServletException(" Invalid credentials");
+		}
+		
+		jwtToken = Jwts.builder()
+					   .setSubject("Demo")
+					   .setIssuer("sam")
+					   .setExpiration(new Date(System.currentTimeMillis()+300000))
+					   .signWith(SignatureAlgorithm.HS256, "ibmwave8")
+					   .compact();
+		return jwtToken;
         
 }
 

@@ -2,6 +2,11 @@ package com.stackroute.keepnote.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
 /*
  * The class "User" will be acting as the data model for the User Table in the database. 
  * Please note that this class is annotated with @Entity annotation. 
@@ -9,7 +14,7 @@ import java.util.Date;
  * If it finds any, then it will begin the process of looking through that particular 
  * Java object to recreate it as a table in your database.
  */
-
+@Entity
 public class User {
 
     /*
@@ -22,61 +27,90 @@ public class User {
 	 */
 	
 
-    
+    @Id
+    @Column(length = 50)
     private String userId;
+    @Column(length = 50)
     private String userPassword;
-   
+    @Column(length = 50)
+    private String firstName;
+    @Column(length = 50)
+    private String lastName;
+    @Column(length = 50)
+    private String userRole;
+    @Column(length = 50)
+    private Date userAddedDate;
 	
-    public String getUserId() {
-    	return null;
+    public User() {
+    	
     }
-
-    public void setUserId(String  string) {
-       
-    }
-
-    public String getFirstName() {
-    	return null;
-    }
-
-    public void setFirstName(String  string) {
-        
-    }
-
-    public String getLastName() {
-    	return null;
-    }
-
-    public void setLastName(String  string) {
-       
-    }
-
-    public String getUserPassword() {
-    	return null;
-    }
-
-    public void setUserPassword(String  string) {
-       
-    }
-
-    public String getUserRole() {
-    	return null;
-    }
-
-    public void setUserRole(String  string) {
-      
-    }
-
-
-    public Date getUserAddedDate() {
-        return null;
-    }
-
-    public void setUserAddedDate(Date date) {
-        
-    }
-
     
+    public User(String userId, String firstName, String lastName, String userPassword, String userRole,
+			Date userAddedDate) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userPassword = userPassword;
+		this.userRole = userRole;
+		this.userAddedDate = userAddedDate;
+	}
 
+	public String getUserId() {
+		return userId;
+	}
 
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getUserPassword() {
+		return userPassword;
+	}
+
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
+
+	public Date getUserAddedDate() {
+		return userAddedDate;
+	}
+
+	public void setUserAddedDate(Date userAddedDate) {
+		this.userAddedDate = userAddedDate;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", userPassword="
+				+ userPassword + ", userRole=" + userRole + ", userAddedDate=" + userAddedDate + "]";
+	}
+	
+    
+    
+    
 }

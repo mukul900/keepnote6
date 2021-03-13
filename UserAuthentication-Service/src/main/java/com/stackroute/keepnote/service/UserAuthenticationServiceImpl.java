@@ -1,8 +1,14 @@
 package com.stackroute.keepnote.service;
 
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.stackroute.keepnote.exception.UserAlreadyExistsException;
 import com.stackroute.keepnote.exception.UserNotFoundException;
 import com.stackroute.keepnote.model.User;
+import com.stackroute.keepnote.repository.UserAutheticationRepository;
 
 /*
 * Service classes are used here to implement additional business logic/validation 
@@ -15,7 +21,7 @@ import com.stackroute.keepnote.model.User;
 * */
 
 
-
+@Service
 public class UserAuthenticationServiceImpl implements UserAuthenticationService {
 
     /*
@@ -24,8 +30,13 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 	 * object using the new keyword.
 	 */
 
-
-
+	@Autowired
+	UserAutheticationRepository userAutheticationRepository;
+	
+	public UserAuthenticationServiceImpl(UserAutheticationRepository userAutheticationRepository)
+	{
+		this.userAutheticationRepository=userAutheticationRepository;
+	}
 
 
      /*
@@ -35,9 +46,12 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 	 */
     @Override
     public User findByUserIdAndPassword(String userId, String password) throws UserNotFoundException {
-
-      
-        return null;
+    	User user=userAutheticationRepository.findByUserIdAndUserPassword(userId, password);
+    	if(user==null)
+    	{
+    		throw new UserNotFoundException("user not found");
+    	}
+    	return user;
     }
 
 
@@ -50,7 +64,11 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 
     @Override
     public boolean saveUser(User user) throws UserAlreadyExistsException {
-       
-        return false;
+    	 Optional<User> u1 = userAutheticationRepository.findById(user.getUserId());
+         if (u1.isPresent()) {
+             throw new UserAlreadyExistsException("User with Id already exists");
+         }
+         userAutheticationRepository.save(user);
+         return true;
     }
 }
